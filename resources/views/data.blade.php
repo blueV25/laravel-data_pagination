@@ -21,13 +21,21 @@
         <hr>
 
 
-        <form class="d-flex mb-3" style="max-width: 450px;">
-            <input id="search_data" class="form-control me-1" type="search" placeholder="Search" style="width: 70%;">
+
+<div>
+        <form class="d-flex mb-3" style="max-width: 450px;" >
+            <input id="search_data" class="form-control me-1" type="search" placeholder="Search">
+
             <button id="search_button" class="btn btn-outline-success" type="button" style="width: 35%;">Search</button>
+
         </form>
 
+        <div id="display-error-success" class="d-flex justify-content-center mb-3"
+        style="text-align: center"></div>
 
-        <table class="table table-hover table-bordered table-secondary">
+</div>
+
+        <table class="table table-hover table-bordered table-striped">
             <thead>
                 <tr class="table-info style">
                     <th scope="col">id</th>
@@ -42,7 +50,7 @@
                 </tr>
             </thead>
 
-            <tbody id="data_table_body">
+            <tbody id="data_table_body ">
                 @foreach ($datas as $data)
                     <tr>
                         <th scope="col">{{ $data->id }}</th>

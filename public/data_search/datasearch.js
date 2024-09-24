@@ -10,7 +10,7 @@ function searchdata(){
         const query = $(this).val().trim();
 
         if(query === ''){
-            $("#display-error-success").html(`<span class="alert alert-danger">Nothing to search</span>`)
+            $("#display-error-success").html(`<span class="alert alert-danger" style="min-width: 100%" >Nothing to search</span>`)
             $("#search_data").addClass("is-invalid");
             $("#search_data").removeClass("is-valid")
             load_paginated_data();
@@ -20,7 +20,7 @@ function searchdata(){
                 const datas = await response.json();
 
                 if(datas.length === 0){
-                    $("#display-error-success").html(`<span class="alert alert-danger">Data Not Found</span>`)
+                    $("#display-error-success").html(`<span class="alert alert-danger" style="min-width: 100%" >Data Not Found</span>`)
                     $("#search_data").addClass("is-invalid");
                     $("#search_data").removeClass("is-valid")
                 }else{
